@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript:if</title>
+  </head>
+  <body>
+    <table border="1" style="margin: auto">
+      <tr>
+        <td><span>請猜猜0~10的數字</span></td>
+        <td><input type="text" id="x" value="5" /></td>
+      </tr>
+      <tr>
+        <td colspan="2"><button id="btn">提交</button></td>
+      </tr>
+    </table>
+
+    <script type="text/javascript">
+      document.getElementById("btn").onclick = function () {
+        document.getElementById("circle").style = "background-color:blue;";
+        //document.getElementById("circle").style.display = "none";
+      };
+    </script>
+  </body>
+</html>

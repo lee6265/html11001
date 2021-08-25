@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript:css</title>
+  </head>
+  <style>
+    #circle {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      border-radius: 100px;
+    }
+    td {
+      padding: 10px;
+    }
+    .box {
+      width: 200px;
+      height: 200px;
+      background: blueviolet;
+    }
+  </style>
+  <body>
+    <table border="1" style="margin: auto">
+      <tr>
+        <td><div id="circle"></div></td>
+        <td><div class="box"></div></td>
+      </tr>
+      <tr>
+        <td><span>寬 = </span><input type="text" id="x" value="100" /></td>
+        <td><span>長 = </span><input type="text" id="y" value="100" /></td>
+      </tr>
+      <tr>
+        <td colspan="2"><button id="btn">改變</button></td>
+      </tr>
+    </table>
+
+    <script type="text/javascript">
+      document.getElementById("btn").onclick = function () {
+        document.getElementById("circle").style = "background-color:blue;";
+        //document.getElementById("circle").style.display = "none";
+
+        var box = document.querySelector(".box");
+        var x = document.getElementById("x").value;
+        var y = document.getElementById("y").value;
+        alert("x:" + x + "y:" + y);
+        box.style =
+          "background-color: red;height:" + y + "px;width:" + x + "px;";
+      };
+    </script>
+  </body>
+</html>

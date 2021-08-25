@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript:getElementById</title>
+  </head>
+  <body>
+    <button onclick="alert('你好!');">按我</button>
+    <button id="myButton">歡迎按鈕</button>
+    <p id="name">王小明</p>
+    <button id="btn">修改名字</button>
+    <button id="btn2">我的課程</button>
+    <h3 id="course"></h3>
+    <script type="text/javascript">
+      document.getElementById("myButton").onclick = function () {
+        var name = document.getElementById("name").innerHTML;
+        alert(name + "，你 好!");
+      };
+      alert(
+        "頁面加載...\n" +
+          document.getElementById("name").innerHTML +
+          ", 歡迎光臨!"
+      );
+      document.getElementById("btn").addEventListener("click", function () {
+        document.getElementById("name").innerHTML = "李大仁";
+      });
+      document.getElementById("btn2").onclick = function () {
+        document.getElementById("course").innerHTML =
+          "<ul><li>HTML</li><li>Python</li><li>SQL</li></ul>";
+      };
+    </script>
+  </body>
+</html>
